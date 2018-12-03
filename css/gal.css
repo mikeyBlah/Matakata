@@ -1,0 +1,214 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.gal_square_cont{
+	width: 80%;
+	margin: 40px auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.square_wrap{
+	width: 30%;
+	flex-grow: grow;
+	margin: 5px;
+	cursor: pointer;
+	overflow: hidden;
+}
+.square{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all .2s ease-in-out; 
+	-moz-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	position: relative;
+}
+.over_dark{
+	-webkit-transition: all .2s ease-in-out; 
+	-moz-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.square:hover .over_dark{
+	opacity: 0;
+}
+.over_dark{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	opacity: 1;
+}
+.square p{
+	text-align: center;
+	color: #FAFAFA;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.4rem;
+	text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+	border: 2px solid #FFF;
+	padding: 4px 12px;
+	position: relative;
+	z-index: 2;
+}
+#modal_tab{
+	background: url('../img/tiles/tab_tile.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#modal_sea{
+	background: url('../img/tiles/seating_tile.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#modal_furn{
+	background: url('../img/tiles/furnish_tile.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#modal_light{
+	background: url('../img/tiles/lighting_tile.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#modal_bar{
+	background: url('../img/tiles/bar_tile.jpg');
+	background-size: cover;
+	background-position: center;
+}
+#modal_prop{
+	background: url('../img/tiles/props_tile.jpg');
+	background-size: cover;
+	background-position: center;
+}
+/*// The Modal //*/
+.modal {
+  display: none;
+}
+.modal_active{
+	position: fixed;
+	z-index: 3;
+	left: 0;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	overflow: auto;
+	background: rgba(0,0,0,0.9);
+}
+/*// Modal Content //*/
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 70%;
+  max-width: 1200px;
+}
+
+/*// Close Button //*/
+#close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*// Hide the slides //*/
+#slides{
+  width: 100%;
+  max-height: 70vh;
+  overflow: hidden;
+  background: #FFF;
+  display: flex;
+  justify-content: center;
+}
+.hider{
+	display: none;
+}
+
+/*// Next & Previous //*/
+#prev,
+#next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 20px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+#next {
+  right: 0;
+}
+
+#prev:hover,
+#next:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*// Number Text //*/
+#numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  width: 80px;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#current_slide{
+	max-height: 70vh;
+	width: auto;
+}
+#desc{
+	width: 100%;
+	padding: 20px 0;
+	background: #FAFAFA;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#desc p{
+	width: 80%;
+	text-align: center;
+}
+.active{
+  opacity: 1;
+}
+#item_ad{
+	font-style: italic;
+	font-size: 12px;
+}
+#item_price{
+	font-size: 18px;
+}
+.hold{
+	opacity: 0;
+}
