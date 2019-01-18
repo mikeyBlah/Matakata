@@ -45,7 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $message_body = '';
       unset($_POST['submit']);
       foreach ($_POST as $key => $value){
+        if ($key !== 'email') {
           $message_body .=  "$key: $value\n";
+        }
       }
 
       $to = 'info@matakata.com.au';
